@@ -1,4 +1,4 @@
-package com.example.msapoc.limitsservice;
+package com.example.msapoc.limitsservice.bean;
 
 public class LimitConfiguration {
 	
