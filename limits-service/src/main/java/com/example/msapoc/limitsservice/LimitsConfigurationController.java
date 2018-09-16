@@ -14,7 +14,7 @@ public class LimitsConfigurationController {
 	
 	@GetMapping("/limits")
 	public LimitConfiguration retriveLimitsFromConfiguration() {
-//		return new LimitConfiguration(100, 1);	// 하드코
+//		return new LimitConfiguration(100, 1);	// 하드코딩
 		return new LimitConfiguration(configuration.getMaximum(), configuration.getMinimum());
 	}
 
