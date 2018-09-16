@@ -18,13 +18,14 @@ public class ExchangeValue {
 	private String to;
 
 	private BigDecimal conversionMultiple;
+	
 	private int port;
 	
 	public ExchangeValue() {
 		
 	}
 
-	public ExchangeValue(Long id, String from, String to, BigDecimal conversionMultiple) {
+	public ExchangeValue(Long id, String from, String to, BigDecimal conversionMultiple, int port) {
 		super();
 		this.id = id;
 		this.from = from;
