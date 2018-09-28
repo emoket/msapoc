@@ -1,4 +1,4 @@
-package com.example.msapoc.netflixzuulapigatewayserver;
+package com.example.msapoc.netflixeurekanamingserver;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -7,7 +7,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
-public class NetflixZuulApiGatewayServerApplicationTests {
+public class NetflixEurekaNamingServerApplicationTests {
 
 	@Test
 	public void contextLoads() {
