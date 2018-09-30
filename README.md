@@ -25,3 +25,11 @@ for Mac
 ``` bash
 RABBIT_URI=amqp://localhost java -jar zipkin-server-2.11.6-exec.jar
 ```
+
+## Config Server refresh
+
+using Postman
+
+``` bash
+POST > http://localhost:8080/actuator/bus-refresh
+```
