@@ -17,3 +17,19 @@ MSA 도입을 위한 POC
 | Netflix Eureka Naming Server      | 8761                  |
 | Netflix Zuul API Gateway Server   | 8765                  |
 | Zipkin Distributed Tracing Server | 9411                  |
+
+
+## Rabbit MQ
+
+for Mac
+``` bash
+RABBIT_URI=amqp://localhost java -jar zipkin-server-2.11.6-exec.jar
+```
+
+## Config Server refresh
+
+using Postman
+
+``` bash
+POST > http://localhost:8080/actuator/bus-refresh
+```
