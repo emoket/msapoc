@@ -12,6 +12,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 public interface CurrencyExchangeServiceProxy {
 	
 //	@GetMapping("/currency-exchange/from/{from}/to/{to}")
+	
+//	http://localhost:8765/{app-name}/{uri}
 	@GetMapping("/currency-exchange-service/currency-exchange/from/{from}/to/{to}")
 	public CurrencyConversionBean retrieveExchangeValue
 		(@PathVariable("from") String from, @PathVariable("to") String to);
