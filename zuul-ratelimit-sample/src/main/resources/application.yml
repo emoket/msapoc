@@ -1,0 +1,40 @@
+
+spring:
+# Redis
+  redis:
+    host: localhost
+    port: 6379
+
+# 서비스 라우팅 구성
+zuul:
+  routes:
+    serviceA:
+      path: /serviceA
+      url: forward:/services
+    serviceB:
+      path: /serviceB
+      url: http://localhost:8080/services
+    serviceC:
+      strip-prefix: false
+      path: /serviceC/**
+      url: forward:/services
+# 서비스 등급 제한 구성
+  ratelimit:
+    enabled: true
+    policies:
+      serviceA:
+        limit: 10
+        refreshInterval: 60
+        types:
+          - ip
+      serviceB:
+        limit: 2
+        refreshInterval: 30
+        types:
+          - ip
+      serviceC:
+        limit: 2
+        refreshInterval: 60
+        types:
+          - url
+  strip-prefix: true
